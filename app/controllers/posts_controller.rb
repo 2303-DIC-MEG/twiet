@@ -8,10 +8,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(params.require(:post).permit(:content))
+    Post.create(post_params)
     redirect_to new_post_path
   end
 
+  def show
+  end
   private
 
   def post_params
