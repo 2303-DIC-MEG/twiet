@@ -30,12 +30,13 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
 
     def destroy
       @post.destroy
       redirect_to posts_path, notice:"ブログを削除しました！"
     end
-  end
+    
   private
 
   def post_params
